@@ -1,7 +1,7 @@
 #!name=去广告
 #!desc=拦截常见广告联盟、统计与归因上报。只有域名规则，不依赖 HTTPS 解密或脚本运行时，mihomo 内核可以完整生效。
 #!author=aqiyoung
-#!version=2026.11.06
+#!version=2026.11.06.1
 #!homepage=https://github.com/aqiyoung/skyward-modules
 #!system=ios, macos
 
@@ -67,6 +67,24 @@ DOMAIN-SUFFIX,waps.cn,REJECT
 DOMAIN-SUFFIX,dianjoy.com,REJECT
 DOMAIN-SUFFIX,adview.cn,REJECT
 DOMAIN-SUFFIX,adn.insight.ucweb.com,REJECT
+
+# ── 微博 / 新浪
+# 微博有一套自己的广告投放系统：开屏预加载、素材、投放策略都在 uve.weibo.com
+# 和 biz.weibo.com 下面，不经过任何第三方联盟，所以要单独点名。
+DOMAIN-SUFFIX,uve.weibo.com,REJECT
+DOMAIN-SUFFIX,adstrategy.biz.weibo.com,REJECT
+DOMAIN-SUFFIX,promote.biz.weibo.cn,REJECT
+DOMAIN-SUFFIX,alitui.weibo.com,REJECT
+DOMAIN-SUFFIX,tui.weibo.com,REJECT
+DOMAIN-SUFFIX,sax.sina.cn,REJECT
+DOMAIN-SUFFIX,r.sax.sina.com.cn,REJECT
+DOMAIN-SUFFIX,ad.sina.com.cn,REJECT
+DOMAIN-SUFFIX,adbox.sina.com.cn,REJECT
+DOMAIN-SUFFIX,dcads.sina.com.cn,REJECT
+DOMAIN-SUFFIX,adm.sina.com.cn,REJECT
+DOMAIN-SUFFIX,add.sina.com.cn,REJECT
+DOMAIN-SUFFIX,beacon.sina.com.cn,REJECT
+DOMAIN-SUFFIX,sbeacon.sina.com.cn,REJECT
 
 # ── 海外广告网络
 DOMAIN-SUFFIX,applovin.com,REJECT
