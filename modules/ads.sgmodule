@@ -1,0 +1,136 @@
+#!name=去广告
+#!desc=拦截常见广告联盟、统计与归因上报。只有域名规则，不依赖 HTTPS 解密或脚本运行时，mihomo 内核可以完整生效。
+#!author=aqiyoung
+#!version=2026.11.06
+#!homepage=https://github.com/aqiyoung/skyward-modules
+#!system=ios, macos
+
+[Rule]
+# ── 穿山甲 / 字节跳动
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
+DOMAIN-SUFFIX,pangolin-dsp-toutiao.com,REJECT
+DOMAIN-SUFFIX,pangolin-dsp-toutiao-b.com,REJECT
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
+DOMAIN-SUFFIX,pglstatp-snssdk-toutiao.com,REJECT
+DOMAIN-SUFFIX,ad.toutiao.com,REJECT
+DOMAIN-SUFFIX,csjplatform.com,REJECT
+
+# ── 腾讯广告（广点通 / 优量汇）
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,e.qq.com,REJECT
+DOMAIN-SUFFIX,ad.qq.com,REJECT
+DOMAIN-SUFFIX,pgdt.gtimg.cn,REJECT
+DOMAIN-SUFFIX,tianshu.gtimg.cn,REJECT
+DOMAIN-SUFFIX,adsmind.gdtimg.com,REJECT
+DOMAIN-SUFFIX,gdtimg.com,REJECT
+
+# ── 百度联盟
+DOMAIN-SUFFIX,mobads.baidu.com,REJECT
+DOMAIN-SUFFIX,mobads-logs.baidu.com,REJECT
+DOMAIN-SUFFIX,cpro.baidu.com,REJECT
+DOMAIN-SUFFIX,pos.baidu.com,REJECT
+DOMAIN-SUFFIX,union.baidu.com,REJECT
+
+# ── 阿里妈妈 / TanX
+DOMAIN-SUFFIX,alimama.com,REJECT
+DOMAIN-SUFFIX,alimama.cn,REJECT
+DOMAIN-SUFFIX,tanx.com,REJECT
+DOMAIN-SUFFIX,atanx.alicdn.com,REJECT
+DOMAIN-SUFFIX,atanx2.alicdn.com,REJECT
+DOMAIN-SUFFIX,simba.taobao.com,REJECT
+
+# ── 快手联盟
+DOMAIN-SUFFIX,gdfp.gifshow.com,REJECT
+DOMAIN-SUFFIX,ad.partner.gifshow.com,REJECT
+DOMAIN-SUFFIX,log-sdk.gifshow.com,REJECT
+DOMAIN-SUFFIX,adtrack.e.kuaishou.com,REJECT
+DOMAIN-SUFFIX,e.kuaishou.com,REJECT
+DOMAIN-SUFFIX,promotion-partner.kuaishou.com,REJECT
+
+# ── 手机厂商广告
+DOMAIN-SUFFIX,api.ad.xiaomi.com,REJECT
+DOMAIN-SUFFIX,globalapi.ad.xiaomi.com,REJECT
+DOMAIN-SUFFIX,ad.mi.com,REJECT
+DOMAIN-SUFFIX,adv.sec.miui.com,REJECT
+DOMAIN-SUFFIX,adv.sec.intl.miui.com,REJECT
+DOMAIN-SUFFIX,ads.oppomobile.com,REJECT
+DOMAIN-SUFFIX,adsfs.oppomobile.com,REJECT
+DOMAIN-SUFFIX,uapi-ads.vivo.com.cn,REJECT
+DOMAIN-SUFFIX,samsungads.com,REJECT
+
+# ── 国内其他广告联盟
+DOMAIN-SUFFIX,domob.cn,REJECT
+DOMAIN-SUFFIX,ipinyou.com,REJECT
+DOMAIN-SUFFIX,youmi.net,REJECT
+DOMAIN-SUFFIX,waps.cn,REJECT
+DOMAIN-SUFFIX,dianjoy.com,REJECT
+DOMAIN-SUFFIX,adview.cn,REJECT
+DOMAIN-SUFFIX,adn.insight.ucweb.com,REJECT
+
+# ── 海外广告网络
+DOMAIN-SUFFIX,applovin.com,REJECT
+DOMAIN-SUFFIX,unityads.unity3d.com,REJECT
+DOMAIN-SUFFIX,ironsrc.com,REJECT
+DOMAIN-SUFFIX,vungle.com,REJECT
+DOMAIN-SUFFIX,vungle.cn,REJECT
+DOMAIN-SUFFIX,chartboost.com,REJECT
+DOMAIN-SUFFIX,adcolony.com,REJECT
+DOMAIN-SUFFIX,inmobi.com,REJECT
+DOMAIN-SUFFIX,startapp.com,REJECT
+DOMAIN-SUFFIX,tapjoy.com,REJECT
+DOMAIN-SUFFIX,mopub.com,REJECT
+DOMAIN-SUFFIX,amazon-adsystem.com,REJECT
+DOMAIN-SUFFIX,supersonicads.com,REJECT
+DOMAIN-SUFFIX,adsafeprotected.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT
+DOMAIN-SUFFIX,googleadservices.com,REJECT
+DOMAIN-SUFFIX,adservice.google.com,REJECT
+DOMAIN-SUFFIX,an.facebook.com,REJECT
+DOMAIN-SUFFIX,an.yandex.ru,REJECT
+DOMAIN-SUFFIX,criteo.com,REJECT
+DOMAIN-SUFFIX,taboola.com,REJECT
+DOMAIN-SUFFIX,outbrain.com,REJECT
+DOMAIN-SUFFIX,pubmatic.com,REJECT
+DOMAIN-SUFFIX,rubiconproject.com,REJECT
+DOMAIN-SUFFIX,openx.net,REJECT
+DOMAIN-SUFFIX,adnxs.com,REJECT
+DOMAIN-SUFFIX,smartadserver.com,REJECT
+DOMAIN-SUFFIX,smaato.com,REJECT
+
+# ── 统计与分析
+DOMAIN-SUFFIX,umeng.com,REJECT
+DOMAIN-SUFFIX,umengcloud.com,REJECT
+DOMAIN-SUFFIX,umeng.co,REJECT
+DOMAIN-SUFFIX,talkingdata.com,REJECT
+DOMAIN-SUFFIX,sensorsdata.cn,REJECT
+DOMAIN-SUFFIX,growingio.com,REJECT
+DOMAIN-SUFFIX,growingio.cn,REJECT
+DOMAIN-SUFFIX,zhugeio.com,REJECT
+DOMAIN-SUFFIX,analysys.cn,REJECT
+DOMAIN-SUFFIX,reyun.com,REJECT
+DOMAIN-SUFFIX,mmstat.com,REJECT
+DOMAIN-SUFFIX,cnzz.com,REJECT
+DOMAIN-SUFFIX,51.la,REJECT
+DOMAIN-SUFFIX,hm.baidu.com,REJECT
+DOMAIN-SUFFIX,mta.qq.com,REJECT
+DOMAIN-SUFFIX,beacon.qq.com,REJECT
+DOMAIN-SUFFIX,admaster.com.cn,REJECT
+DOMAIN-SUFFIX,miaozhen.com,REJECT
+DOMAIN-SUFFIX,google-analytics.com,REJECT
+DOMAIN-SUFFIX,googletagmanager.com,REJECT
+DOMAIN-SUFFIX,app-measurement.com,REJECT
+
+# ── 归因
+DOMAIN-SUFFIX,adjust.com,REJECT
+DOMAIN-SUFFIX,adjust.cn,REJECT
+DOMAIN-SUFFIX,appsflyer.com,REJECT
+DOMAIN-SUFFIX,branch.io,REJECT
+DOMAIN-SUFFIX,kochava.com,REJECT
+DOMAIN-SUFFIX,tenjin.cc,REJECT
+DOMAIN-SUFFIX,gameanalytics.com,REJECT
+
+# ── 崩溃上报
+DOMAIN-SUFFIX,bugly.qq.com,REJECT
+DOMAIN-SUFFIX,crashlytics.com,REJECT
